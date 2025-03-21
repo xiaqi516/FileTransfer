@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane fx:controller="com.xiaqi.filetransfer.gui.main.MainController" orientation="VERTICAL" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1">
+  <HBox maxHeight="28" minHeight="28">
+    <TextField fx:id="ipText" promptText="服务端IPv6" focusTraversable="false" prefWidth="302" style="-fx-font-size: 14px"/>
+    <Button fx:id="connectButton" onAction="#connect" text="连接" style="-fx-font-size: 14px"/>
+    <VBox alignment="CENTER" prefWidth="72">
+      <Label fx:id="statusLabel" text="未连接" style="-fx-font-size: 14px"/>
+    </VBox>
+    <Button fx:id="fileButton" text="文件选择" onAction="#openFileChooser" disable="true" style="-fx-font-size: 14px"/>
+  </HBox>
+  <TabPane>
+    <Tab text="上传" closable="false">
+      <ScrollPane fitToWidth="true">
+        <VBox fx:id="uploadTaskVBox">
+          <!--<VBox style="-fx-border-color: #8ac6ef;-fx-border-width: 2px;-fx-border-radius: 3px;">
+            <Label>S01E10.2024.2160p.WEB-DL.H264.AAC.mp4</Label>
+            <Label>100M/1G</Label>
+            <ProgressBar fx:id="progressBar" prefWidth="Infinity" progress="-1"/>
+          </VBox>-->
+        </VBox>
+      </ScrollPane>
+    </Tab>
+    <Tab text="下载" closable="false">
+      <VBox fx:id="downloadTaskVBox"></VBox>
+    </Tab>
+  </TabPane>
+</SplitPane>

@@ -1,0 +1,3 @@
+"D:\Program Files\Java\jdk-17.0.13+11\bin\jdeps.exe" --ignore-missing-deps --generate-module-info . netty-shaded-4.1.118.Final.jar
+"D:\Program Files\Java\jdk-17.0.13+11\bin\javac.exe" --module-path protobuf-java-4.30.0.jar --patch-module netty.shaded=netty-shaded-4.1.118.Final.jar netty.shaded/module-info.java
+"D:\Program Files\Java\jdk-17.0.13+11\bin\jar.exe" uf netty-shaded-4.1.118.Final.jar -C netty.shaded module-info.class
